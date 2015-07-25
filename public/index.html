@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Grid</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/grid.js"></script>
+    <script src="js/rover.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <canvas id="grid" width="500" height="500"></canvas>
+      <img src="images/robot.png" id="robot">
+      <img src="images/obstacle.png" id="obstacle" weigth="0" height="0">
+     
+      <p id="xpos"></p>
+      <p id="ypos"></p>
+      <p id="facing"></p>
+    </div>
+  </body>
+  <script>
+    window.onload = function(){
+      var grid = new Grid(10, 10, [{x: 3, y: 2}, {x: 5, y: 4}]);
+      grid.draw();
+      
+
+      window.rover = new Rover(grid, 1 , 4, 9 , 0);
+      rover.draw();
+      document.addEventListener("DOMContentLoaded", rover.init(), false);
+    }
+
+  </script>
+</html>
