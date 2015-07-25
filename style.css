@@ -1,0 +1,12 @@
+html {
+  background-color: grey;
+}
+
+#grid {
+  display: block;
+  margin: 0 auto;
+}
+
+#robot, #xpos, #ypos, #facing {
+  display: none;
+}
